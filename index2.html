@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar con Estrellas</title>
+    <style>
+        /* Incluir el CSS dentro del archivo HTML para evitar problemas de carga */
+        body {
+            margin: 0;
+            overflow: hidden;
+             
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+            background-color: black;/* Fondo negro para que las estrellas se vean mejor */
+        }
+        .texto-ayuda{
+            width: 30%;
+            
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            left: 35%;
+        }
+        h1{
+            color: whitesmoke;
+        }
+
+        #exit-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#exit-button:hover {
+  background-color: darkred;
+}
+
+.btn-movil {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.btn-movil button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-movil button:hover {
+    background-color: #0056b3;
+}
+@media(max-width:400px){
+    .texto-ayuda{
+        visibility: hidden;
+    }
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+      
+      <style>
+        #loading-screen {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          z-index: 1000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        #loading-text {
+          color: white;
+          font-size: 24px;
+        }
+      </style>
+    <div id="container">
+        <div class="texto-ayuda">
+            <h1>Controles: zoom: +/-, salir b</h1>
+        </div>
+    </div>
+    <button id="exit-button">Salir</button>
+    <div id="controls" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000;">
+        <button id="zoomIn">Acercar</button>
+        <button id="zoomOut">Alejar</button>
+        <button id="exit">Salir</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
