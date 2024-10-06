@@ -9,17 +9,34 @@
         body {
             margin: 0;
             overflow: hidden;
-            background-color: black; /* Fondo negro para que las estrellas se vean mejor */
+             
         }
 
         #container {
             width: 100%;
             height: 100%;
+            background-color: black;/* Fondo negro para que las estrellas se vean mejor */
+        }
+        .texto-ayuda{
+            width: 30%;
+            
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            left: 35%;
+        }
+        h1{
+            color: whitesmoke;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="container"></div>
+    <div id="container">
+        <div class="texto-ayuda">
+            <h1>Controles: zoom: +/-, salir b</h1>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
